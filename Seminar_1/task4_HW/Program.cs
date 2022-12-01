@@ -3,15 +3,13 @@ int number1 = Convert.ToInt32(Console.ReadLine());
 int number2 = Convert.ToInt32(Console.ReadLine());
 int number3 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Поверяем какое число максимальное:");
-if ((number1 > number2) & (number1 > number3))
+int max = number1;
+if (max < number2)
 {
-    Console.WriteLine(number1);  
+    max = number2;
 }
-else if ((number2 > number3) & (number2 > number1))
+if (max < number3)
 {
-    Console.WriteLine(number2);  
+    max = number3;  
 }
-else if ((number3 > number2) & (number3 > number1))
-{
-    Console.WriteLine(number3); 
-}
+Console.WriteLine(max);
