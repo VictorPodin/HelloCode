@@ -21,7 +21,7 @@ for(int i = 0; i < lenght; i++)
     digitsofnumber[i] = N % 10;
     N = N / 10;
 }
-for(int i = 0; i < lenght; i++)
+for(int i = lenght - 1; i >= 0; i--)
 {
     Console.Write(digitsofnumber[i]);
 }
