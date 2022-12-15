@@ -4,8 +4,6 @@
 Console.WriteLine("Из скольки элементов массив желаете?");
 int lenght = Convert.ToInt32(Console.ReadLine());
 double[] realarray = new double[lenght];
-int indexmax = 0;
-int indexmin = 0;
 void FillArrayRandomRealNumbers(double[] collection)
 {
     int index = 0;
@@ -21,6 +19,7 @@ FillArrayRandomRealNumbers(realarray);
 int GetIndexOfMax(double[] collection)
 {
     int index = 0;
+    int indexmax = 0;
     while (index < lenght)
     {
         if (collection[index] > collection[indexmax])
@@ -34,6 +33,7 @@ int GetIndexOfMax(double[] collection)
 int GetIndexOfMin(double[] collection)
 {
     int index = 0;
+    int indexmin = 0;
     while (index < lenght)
     {
         if (collection[index] < collection[indexmin])
