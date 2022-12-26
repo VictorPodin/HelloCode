@@ -14,9 +14,5 @@ int M = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите значение N:");
 int N = Convert.ToInt32(Console.ReadLine());
 Console.Write("M = " + M + "; N = " + N + "  → ");
-if (M != N) 
-{
-    int mnSum = SumNumsFromMtoN(M, N);
-    Console.Write(mnSum);
-}
-else { Console.WriteLine("Числа одинаковые, a надо чтоб был промежуток");}
+if (M != N) { Console.Write(SumNumsFromMtoN(M, N)); }
+else { Console.WriteLine("Числа одинаковые, a надо чтоб был промежуток"); }
