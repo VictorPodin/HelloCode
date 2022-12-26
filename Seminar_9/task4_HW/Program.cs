@@ -36,54 +36,36 @@ void FillArraySpiral(int[,] arr)
     int colElem = arr.GetLength(0) * arr.GetLength(1);
     int countElem = 0;
     int startElem = 1;
-    int direction = 1;  //  1-право, 2-вниз, 3-влево, 4-вверх
     while (countElem < colElem)
     {
-        if (direction == 1)
+        for (int j = left, i = top; j <= right; j++)
         {
-            for (int j = left, i = top; j <= right; j++)
-            {
-                arr[i, j] = startElem;
-                startElem++;
-                countElem++;
-            }
-            top++;
-            direction++;
+            arr[i, j] = startElem;
+            startElem++;
+            countElem++;
         }
-        if (direction == 2)
+        top++;
+        for (int i = top, j = right; i <= bottom; i++)
         {
-            for (int i = top, j = right; i <= bottom; i++)
-            {
-                arr[i, j] = startElem;
-                startElem++;
-                countElem++;
-            }
-            right--;
-            direction++;
+            arr[i, j] = startElem;
+            startElem++;
+            countElem++;
         }
-        if (direction == 3)
+        right--;
+        for (int j = right, i = bottom; j >= left; j--)
         {
-            for (int j = right, i = bottom; j >= left; j--)
-            {
-                arr[i, j] = startElem;
-                startElem++;
-                countElem++;
-            }
-
-            bottom--;
-            direction++;
+            arr[i, j] = startElem;
+            startElem++;
+            countElem++;
         }
-        if (direction == 4)
+        bottom--;
+        for (int i = bottom, j = left; i >= top; i--)
         {
-            for (int i = bottom, j = left; i >= top; i--)
-            {
-                arr[i, j] = startElem;
-                startElem++;
-                countElem++;
-            }
-            left++;
-            direction = 1;
+            arr[i, j] = startElem;
+            startElem++;
+            countElem++;
         }
+        left++;
     }
 }
 FillArraySpiral(arraySpiral);
