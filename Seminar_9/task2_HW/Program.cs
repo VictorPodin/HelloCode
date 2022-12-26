@@ -19,4 +19,4 @@ if (M != N)
     int mnSum = SumNumsFromMtoN(M, N);
     Console.Write(mnSum);
 }
-else { Console.WriteLine("Числа одинаковые, а надо чтоб был промежуток");}
+else { Console.WriteLine("Числа одинаковые, a надо чтоб был промежуток");}
